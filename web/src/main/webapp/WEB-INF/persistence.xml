@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<resources>
+    <Resource id="jdbc/DataSource" type="javax.sql.DataSource" name="jdbc/DataSource">
+        jdbcDriver = org.postgresql.Driver
+        jdbcUrl = jdbc:postgresql://localhost:5432/dnd
+        jtaManaged = true <!-- Автоматическое управление транзакциями (через JTA) -->
+        userName = postgres
+        password = 9742
+    </Resource>
+</resources>

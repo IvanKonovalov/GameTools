@@ -1,0 +1,58 @@
+.form-signin{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    border: #3f5f5f solid 1px;
+    border-radius: 3px;
+}
+body {
+    font-family: "Noto Sans", serif;
+    overflow-x: hidden;
+    color: #212529;
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(255, 255, 255, 0.0);
+}
+.tab-content {
+    width: 100%;
+    height: 100vh;
+}
+.tab-pane {
+    height: 100vh;
+    display: flex;
+    color: #212529;
+}
+.themecolor {
+    color: #212529;
+    background-color: #f5f5f5;
+}
+.nav {
+    height: 100%;
+    background-color: rgba(21, 21, 29, 0.63);
+}
+.nav-link {
+    color: rgb(168, 168, 168);
+}
+.nav-link:hover {
+    color: white;
+}
+.nav .active {
+    color: white;
+}
+
+#account .active{
+    display: flex;
+}
+
+#inputLogin {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#inputPassword {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

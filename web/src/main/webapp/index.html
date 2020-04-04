@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Hey there!</title>
+</head>
+<body>
+<div class="row">
+    <div class="col-3  pr-0" style="height: 100vh;">
+        <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <ul class="nav flex-column">
+                <li class=" mt-2 nav-item">
+                    <a class="nav-link active" id="account-tab" data-toggle="tab" href="#account"
+                       role="tab" aria-controls="account" aria-selected="true" onclick="onFlex()" >Аккаунт</a>
+                </li>
+                <li class="mt-2 nav-item">
+                    <a class="nav-link" id="create-tab" data-toggle="tab" href="#create"
+                       role="tab" aria-controls="create" aria-selected="true" onclick="offFlex()">Создать комнату</a>
+                </li>
+                <li class="mt-2 nav-item">
+                    <a class="nav-link" id="join-tab" data-toggle="tab" href="#join"
+                       role="tab" aria-controls="join" aria-selected="true" onclick="offFlex()">Присоединиться</a>
+                </li>
+                <li class="mt-2 nav-item">
+                    <a class="nav-link " href="Editor/Editor.html">Редактор</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-9 pr-0 themecolor">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" style="display: flex" id="account" role="tabpanel" aria-labelledby="account-tab">
+                <form class="form-signin">
+                    <h1 class="h3 mb-3 font-weight-normal">Введите ваши данные</h1>
+                    <label for="inputLogin" class="sr-only">Логин</label>
+                    <input id="inputLogin" class="form-control" placeholder="Логин" required="" autofocus="">
+                    <label for="inputPassword" class="sr-only">Пароль</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required="">
+                    <div class="mb-3 mt-3">
+                        <p>Если вас еще нет в системе, будет создан новый аккаунт</p>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+                </form>
+            </div>
+            <div class="tab-pane fade show" id="create" role="tabpanel" aria-labelledby="create-tab">
+                <p style="border: #212529 solid"> Создать комнату</p>
+            </div>
+            <div class="tab-pane fade show" id="join" role="tabpanel" aria-labelledby="join-tab">
+                <p style="border: #212529 solid"> Подключиться</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script>
+    function offFlex() {
+        var element = document.querySelector("#account");
+        element.setAttribute("style","display: none");
+    }
+    function onFlex() {
+        var element = document.querySelector("#account");
+        element.setAttribute("style","display: flex");
+    }
+</script>
+</body>
+</html>

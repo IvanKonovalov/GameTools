@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../style/editor.css">
+    <title>Editor</title>
+</head>
+<body>
+<div class="row" >
+    <!-- Боковая панель -->
+    <div class="col-3 pr-0 d-sm-none d-lg-block"  style="height: 100vh;">
+        <div class="nav flex-column " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <ul class="nav flex-column" >
+                <li class="nav-item">
+                    <a class="nav-link " href="../../src/main/webapp/index.html">На главную</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="class-tab" data-toggle="tab" href="#class"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icons.png" alt="icons" height="30px" width="30px">
+                        Класс
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="race-tab" data-toggle="tab" href="#race"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icon-race.png" alt="icons" height="30px" width="30px">
+                        Расa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="backstage-tab" data-toggle="tab" href="#backstage"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icon-backstage.png" alt="icons" height="30px" width="30px">
+                        Предыстория
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="feats-tab" data-toggle="tab" href="#feats"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icons.png" alt="icons" height="30px" width="30px">
+                        Черта
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="weapon-tab" data-toggle="tab" href="#weapon"
+                       role="tab" aria-controls="home" aria-selected="true">
+                       <img src="../resources/icon-weapon.png" alt="icons" height="30px" width="30px">
+                        Оружие
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="armor-tab" data-toggle="tab" href="#armor"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icon-armor.png" alt="icons" height="30px" width="30px">
+                        Броня
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="items-tab" data-toggle="tab" href="#items"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icon-item.png" alt="icons" height="30px" width="30px">
+                        Предметы
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="skills-tab" data-toggle="tab" href="#skills"
+                       role="tab" aria-controls="home" aria-selected="true">
+                       <img src="../resources/icon-skill.png" alt="icons" height="30px" width="30px">
+                        Навыки
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="magic-tab" data-toggle="tab" href="#magic"
+                       role="tab" aria-controls="home" aria-selected="true">
+                        <img src="../resources/icon-magic.png" alt="icons" height="30px" width="30px">
+                        Магия
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Контент -->
+    <div class="col-9 pl-0 themecolor">
+        <div class="tab-content m-5" id="v-pills-tabContent">
+            <!-- Классы -->
+            <div class="tab-pane fade show active" id="class" role="tabpanel" aria-labelledby="class-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Классы</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Варвар</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <hr/>
+                <h5>Новый класс</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="className">Название</label>
+                        <input class="form-control" id="className" placeholder="Введите название"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="classDescription">Описание класса</label>
+                        <textarea class="form-control" id="classDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <h4>Список навыков</h4>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Расы -->
+            <div class="tab-pane fade" id="race" role="tabpanel" aria-labelledby="race-tab">
+                <!-- Список -->
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Расы</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Драконорожденный</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <hr/>
+                <h5>Новая раса</h5>
+                <form>
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="raceName">Название</label>
+                        <input class="form-control" id="raceName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="raceDescription">Описание расы</label>
+                        <textarea class="form-control" id="raceDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <div class="row">
+                        <!-- Размер -->
+                        <div class="form-group row col-6">
+                            <label class="col-sm-7 col-form-label" for="size">Размер</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="size">
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Скорость -->
+                        <div class="form-group row col-6">
+                            <label class="col-sm-7 col-form-label" for="speed">Скорость</label>
+                            <div class="col-sm-5">
+                                <select class="form-control" id="speed">
+                                    <option>25</option>
+                                    <option>30</option>
+                                    <option>35</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Бонусы к характеристикам -->
+                    <div>
+                        <h6>Бонусы к характеристикам</h6>
+                        <div class="form-group row">
+                            <label class="col-sm-9 col-form-label" for="strength">Сила</label>
+                            <div class="col-sm-3">
+                                <input value="0" class="form-control" id="strength" placeholder="Введите количество"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-9 col-form-label" for="dexterity">Ловкость</label>
+                            <div class="col-sm-3">
+                                <input value="0" class="form-control" id="dexterity" placeholder="Введите количество"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-9 col-form-label" for="constitution">Телосложение</label>
+                            <div class="col-sm-3">
+                                <input value="0" class="form-control" id="constitution" placeholder="Введите количество"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-9 col-form-label" for="intelligence">Интеллект</label>
+                            <div class="col-sm-3">
+                                <input value="0" class="form-control" id="intelligence" placeholder="Введите количество"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-9 col-form-label" for="wisdom">Мудрость</label>
+                            <div class="col-sm-3">
+                                <input value="0" class="form-control" id="wisdom" placeholder="Введите количество"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-9 col-form-label" for="charisma">Харизма</label>
+                            <div class="col-sm-3">
+                                <input value="0" class="form-control" id="charisma" placeholder="Введите количество"/>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Список навыков</h4>
+                    <h4>Список владений</h4>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Предыстория -->
+            <div class="tab-pane fade" id="backstage" role="tabpanel" aria-labelledby="backstage-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Предыстории</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Отшельник</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <form>
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="backstageName">Название</label>
+                        <input class="form-control" id="backstageName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="backstageDescription">Описание предыстории</label>
+                        <textarea class="form-control" id="backstageDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <h4>Список навыков</h4>
+                    <h4>Список владений и инструментов</h4>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Черты -->
+            <div class="tab-pane fade" id="feats" role="tabpanel" aria-labelledby="feats-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Черты</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Грациозный</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <form>
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="featsName">Название</label>
+                        <input class="form-control" id="featsName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="featsDescription">Описание черты</label>
+                        <textarea class="form-control" id="featsDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <h4>Список требований</h4>
+                    <h4>Список бонусов</h4>
+                </form>
+                <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+            </div>
+            <!-- Оружие -->
+            <div class="tab-pane fade" id="weapon" role="tabpanel" aria-labelledby="weapon-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Оружия</th>
+                        <th>Урон</th>
+                        <th>Тип</th>
+                        <th>Вес</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Рапира</td>
+                        <td>1k8</td>
+                        <td>Колющее</td>
+                        <td>3</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <form method="post" action="weapon">
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="weaponName">Название</label>
+                        <input class="form-control" id="weaponName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="weaponDescription">Описание класса</label>
+                        <textarea class="form-control" id="weaponDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <!-- Категории оружия -->
+                    <div class="weapon-category container row">
+                        <h4 class="mr-4">Категория:</h4>
+                        <div class="ml-2 mt-1 col">
+                            <div class="form-group row">
+                                <input type="radio" class="custom-control-input" id="simpleWeapon" name="SMWeapon" checked>
+                                <label class="custom-control-label" for="simpleWeapon">Простое</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="radio" class="custom-control-input" id="militaryWeapon" name="SMWeapon">
+                                <label class="custom-control-label" for="militaryWeapon">Воиское</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="rangerWeapon" name="rangerWeapon">
+                                <label class="custom-control-label" for="rangerWeapon">Дальнобойное</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Свойства -->
+                    <h4 class="mr-4">Свойства:</h4>
+                    <div class="properties container ml-3 row">
+                        <div class="ml-2 mt-1 col">
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="ammoWeapon">
+                                <label class="custom-control-label" for="ammoWeapon">Боеприпас</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="TwoHandWeapon">
+                                <label class="custom-control-label" for="TwoHandWeapon">Двуручное</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="reachWeapon">
+                                <label class="custom-control-label" for="reachWeapon">Досягаемость</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="distanceWeapon">
+                                <label class="custom-control-label" for="distanceWeapon">Дистанция</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="lightWeapon">
+                                <label class="custom-control-label" for="lightWeapon">Легкое</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="throwableWeapon">
+                                <label class="custom-control-label" for="throwableWeapon">Метательное</label>
+                            </div>
+                        </div>
+                        <div class="ml-2 mt-2 col">
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="specialWeapon">
+                                <label class="custom-control-label" for="specialWeapon">Особое</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="reloadWeapon">
+                                <label class="custom-control-label" for="reloadWeapon">Перезарядка</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="heavyWeapon">
+                                <label class="custom-control-label" for="heavyWeapon">Тяжелое</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="universalWeapon">
+                                <label class="custom-control-label" for="universalWeapon">Универсальное</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="fencingWeapon">
+                                <label class="custom-control-label" for="fencingWeapon">Фехтовальное</label>
+                            </div>
+                            <div class="form-group row">
+                                <input type="checkbox" class="custom-control-input" id="hindranceWeapon">
+                                <label class="custom-control-label" for="hindranceWeapon">Помеха</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Стоимость оружия -->
+                    <div class="form-group row ml-2">
+                        <label class="col-5" for="costWeapon">Стоимость</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="costWeapon" placeholder="Стоимость">
+                        </div>
+                    </div>
+                    <!-- Урон оружия -->
+                    <div class="form-group row ml-2">
+                        <label class="col-5" for="damageWeapon">Урон</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control " id="damageWeapon" placeholder="1k12">
+                        </div>
+                    </div>
+                    <!-- Вес оружия -->
+                    <div class="form-group row ml-2">
+                        <label class="col-5" for="weightWeapon">Вес</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="weightWeapon" placeholder="Вес">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Броня -->
+            <div class="tab-pane fade" id="armor" role="tabpanel" aria-labelledby="armor-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Броня</th>
+                        <th>Класс брони</th>
+                        <th>Вес</th>
+                        <th>Цена</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Пластинчатый</td>
+                        <td>15+мод.Лов(2)</td>
+                        <td>15</td>
+                        <td>35</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <form action="armor" method="post">
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="armorName">Название</label>
+                        <input class="form-control" id="armorName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="armorDescription">Описание брони</label>
+                        <textarea class="form-control" id="armorDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <!-- Тип доспеха -->
+                    <div class="form-group row">
+                        <label class="col-sm-9 " for="armorType">Тип доспеха</label>
+                        <div class="col-sm-3">
+                            <select id="armorType" class="custom-select">
+                                <option value="light" selected>Легкие</option>
+                                <option value="middle">Средние</option>
+                                <option value="heavy">Тяжелые</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Класс доспеха (КД) -->
+                    <div class="form-group row">
+                        <label class="col-sm-9 "  for="armorClass">Класс доспеха</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" id="armorClass" placeholder="Класс доспеха">
+                        </div>
+                    </div>
+                    <!-- Требования к силе -->
+                    <div class="form-group row">
+                        <label class="col-sm-9 "  for="armorStrength">Необходимая сила</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" id="armorStrength" placeholder="Сила">
+                        </div>
+                    </div>
+                    <!-- Штраф к скрытности -->
+                    <div class="form-group row ml-1 container">
+                        <input type="checkbox" class="custom-control-input" id="hindranceStealth">
+                        <div class="col-sm-3">
+                            <label class="custom-control-label" for="hindranceStealth">Помеха скрытности</label>
+                        </div>
+                    </div>
+                    <!-- Стоимость -->
+                    <div class="form-group row">
+                        <label class="col-sm-9 "  for="armorCost">Цена</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" id="armorCost" placeholder="Цена">
+                        </div>
+                    </div>
+                    <!-- Вес -->
+                    <div class="form-group row">
+                        <label class="col-sm-9" for="armorWeight">Вес</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" id="armorWeight" placeholder="Вес">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Предметы -->
+            <div class="tab-pane fade" id="items" role="tabpanel" aria-labelledby="items-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Предметы</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Целебное зелье</td>
+                        <td>Восстанавливает 2к4+4 единиц здоровья</td>
+                    </tr>
+                </table>
+                <form action="items" method="post">
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="itemsName">Название</label>
+                        <input class="form-control" id="itemsName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="itemsDescription">Описание класса</label>
+                        <textarea class="form-control" id="itemsDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9 "  for="itemsCost">Цена</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" id="itemsCost" placeholder="Цена">
+                        </div>
+                    </div>
+                    <!-- Вес -->
+                    <div class="form-group row">
+                        <label class="col-sm-9 "  for="itemsWeight">Вес</label>
+                        <div class="col-sm-3">
+                            <input class="form-control" id="itemsWeight" placeholder="Вес">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Скиллы -->
+            <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Навыки</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ночное зрение</td>
+                        <td>Позволяет видеть в темноте в радиусе 60 футов</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <form>
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="skillsName">Название</label>
+                        <input class="form-control" id="skillsName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="skillsDescription">Описание навыка</label>
+                        <textarea class="form-control" id="skillsDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+            <!-- Магия -->
+            <div class="tab-pane fade" id="magic" role="tabpanel" aria-labelledby="magic-tab">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Заклинания</th>
+                        <th>Школа</th>
+                        <th>Описание</th>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Исцеляющие руки</td>
+                        <td>Восстановление</td>
+                        <td>Исцеляет прикосновением на 1к4 единиц здоровья</td>
+                        <td>Изменить</td>
+                        <td>Удалить</td>
+                    </tr>
+                </table>
+                <form>
+                    <!-- Название -->
+                    <div class="form-group">
+                        <label for="magicName">Название</label>
+                        <input class="form-control" id="magicName" placeholder="Введите название"/>
+                    </div>
+                    <!-- Описание -->
+                    <div class="form-group">
+                        <label for="magicDescription">Описание заклинания</label>
+                        <textarea class="form-control" id="magicDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="magicHLDescription">На больших уровнях</label>
+                        <textarea class="form-control" id="magicHLDescription" placeholder="Введите описание"></textarea>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9  col-form-label" for="magicLevel">Уровень</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicLevel" placeholder="Уровень"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9  col-form-label" for="magicSchool">Школа</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicSchool" placeholder="Школа"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9  col-form-label" for="magicCastingTime">Время накладывания</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicCastingTime" placeholder="Время накладывания"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9 col-form-label" for="magicTarget">Цель</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicTarget" placeholder="Время накладывания"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9 col-form-label" for="magicDistance">Дистанция в футах</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicDistance" placeholder="Дистанция"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9  col-form-label" for="magicComponent">Компоненты</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicComponent" placeholder="Время накладывания"/>
+                        </div>
+                    </div>
+                    <div class="form-group  row">
+                        <label class="col-sm-9 col-form-label" for="magicDuration">Длительность</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicDuration" placeholder="Длительность"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-9  col-form-label" for="magicRitual">Ритуал</label>
+                        <div class="col-sm-3">
+                            <input value="0" class="form-control" id="magicRitual" placeholder="Время накладывания"/>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-secondary">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+</body>
+</html>
